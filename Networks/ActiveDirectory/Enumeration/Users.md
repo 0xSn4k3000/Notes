@@ -6,6 +6,16 @@ https://github.com/insidetrust/statistically-likely-usernames
 kerbrute userenum -d INLANEFREIGHT.LOCAL --dc 172.16.5.5 jsmith.txt -o valid_ad_users
 ```
 
+# Domain Admins
+
+## windapsearch
+
+```bash
+python3 windapsearch.py --dc-ip 172.16.5.5 -u forend@inlanefreight.local -p Klmcargo2 --da
+```
+
+---
+---
 
 # SMB Null session
 

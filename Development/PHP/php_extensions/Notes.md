@@ -16,3 +16,14 @@ extension definition and function implementation
 
 ### tests/*.phpt
 Tests written in PHP
+
+
+# Build Process:
+
+```bash
+./configure
+make
+make test
+```
+
+if you want debugging syms add this to config.m4 `PHP_ADD_COMPILE_FLAG(-g)`

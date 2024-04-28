@@ -133,6 +133,7 @@ Let's use Rubeus to request tickets for accounts with the admincount attribute s
 
 ```bash
 .\Rubeus.exe kerberoast /ldapfilter:'admincount=1' /nowrap
+.\Rubeus.exe kerberoast /user:adunn /nowrap
 ```
 We can use Rubeus with the /tgtdeleg flag to specify that we want only RC4 encryption when requesting a new service ticket. The tool does this by specifying RC4 encryption as the only algorithm we support in the body of the TGS request. This may be a failsafe built-in to Active Directory for backward compatibility. By using this flag, we can request an RC4 (type 23) encrypted ticket that can be cracked much faster.
 

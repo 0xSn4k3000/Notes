@@ -1,7 +1,18 @@
 ## Wordlists:
 https://github.com/insidetrust/statistically-likely-usernames
 
+https://github.com/w0Tx/generate-ad-username
+https://github.com/urbanadventurer/username-anarchy
+https://github.com/initstring/linkedin2username
+
 ## kerbrute
+
+### If available first search for names from the internet and convert them to a list using:
+-> https://github.com/urbanadventurer/username-anarchy
+```bash
+~/tools/active_directory/username-anarchy/username-anarchy -i ./users.txt
+```
+
 ```bash
 kerbrute userenum -d INLANEFREIGHT.LOCAL --dc 172.16.5.5 jsmith.txt -o valid_ad_users
 ```

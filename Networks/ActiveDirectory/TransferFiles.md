@@ -11,3 +11,8 @@ copy files
 Copy-Item -Path "\\10.10.10.10\test\file.txt" -Destination "C:\destination\file.txt"
 copy "\\10.10.10.10\test\file.txt"   "C:\destination\file.txt"
 ```
+
+# Web
+```bash
+Invoke-WebRequest -Uri $url -OutFile $outputPath
+```

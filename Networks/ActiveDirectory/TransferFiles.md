@@ -12,6 +12,12 @@ Copy-Item -Path "\\10.10.10.10\test\file.txt" -Destination "C:\destination\file.
 copy "\\10.10.10.10\test\file.txt"   "C:\destination\file.txt"
 ```
 
+
+# From target share
+```bash
+smbget --recursive smb://10.10.10.100/sharename
+```
+
 # Web
 ```bash
 Invoke-WebRequest -Uri $url -OutFile $outputPath

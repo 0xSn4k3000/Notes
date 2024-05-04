@@ -12,5 +12,12 @@ Import-Module .\PowerView.ps1
 Set-DomainUserPassword -Identity USER_TO_CHANGE_PASS -AccountPassword $PASS_OBJECT -Credential $Cred -Verbose
 ```
 
+### From linux
+
+#### rpc
+```bash
+rpcclient> setuserinfo UserName 23 password
+                                ^
+```
 
 ## Shadow Credentials

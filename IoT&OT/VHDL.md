@@ -1,0 +1,2 @@
+VHDL (VHSIC Hardware Description Language)
+Used to describe the behavior and structure of electronic systems, typically digital circuits such as FPGAs (Field-Programmable Gate Arrays) and ASICs (Application-Specific Integrated Circuits).

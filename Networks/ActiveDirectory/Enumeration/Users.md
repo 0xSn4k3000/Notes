@@ -51,6 +51,10 @@ crackmapexec smb 172.16.5.5 --users
 ldapsearch -h 172.16.5.5 -x -b "DC=INLANEFREIGHT,DC=LOCAL" -s sub "(&(objectclass=user))"  | grep sAMAccountName: | cut -f2 -d" "
 ```
 
+```bash
+ldapsearch -x -H ldap://10.10.10.182 -b "dc=cascade,dc=local" "(objectClass=user)"
+```
+
 # Credentialed Enumeration to Build our User List
 
 ## crackmapexec

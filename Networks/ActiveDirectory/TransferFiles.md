@@ -4,7 +4,7 @@ https://guide.offsecnewbie.com/transferring-files
 
 # SMB Server
 ```bash
-impacket-smbserver share_name /path/to/share
+impacket-smbserver -smb2support share_name /path/to/share
 ```
 copy files
 ```powershell

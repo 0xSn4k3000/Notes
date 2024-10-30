@@ -62,3 +62,8 @@ ldapsearch -x -H ldap://10.10.10.182 -b "dc=cascade,dc=local" "(objectClass=user
 ```bash
 crackmapexec smb 172.16.5.5 -u htb-student -p Academy_student_AD! --users
 ```
+
+# Enumerate users by brute forcing rid
+```bash
+nxc smb 10.10.11.35 -u guest -p '' --rid-brute
+```

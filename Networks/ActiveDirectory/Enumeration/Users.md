@@ -1,4 +1,5 @@
 ## Wordlists:
+
 https://github.com/insidetrust/statistically-likely-usernames
 
 https://github.com/w0Tx/generate-ad-username
@@ -8,7 +9,9 @@ https://github.com/initstring/linkedin2username
 ## kerbrute
 
 ### If available first search for names from the internet and convert them to a list using:
+
 -> https://github.com/urbanadventurer/username-anarchy
+
 ```bash
 ~/tools/active_directory/username-anarchy/username-anarchy -i ./users.txt
 ```
@@ -26,27 +29,32 @@ python3 windapsearch.py --dc-ip 172.16.5.5 -u forend@inlanefreight.local -p Klmc
 ```
 
 ---
+
 ---
 
 # SMB Null session
 
 ## enum4linux
+
 ```bash
 enum4linux -U 172.16.5.5  | grep "user:" | cut -f2 -d"[" | cut -f1 -d"]"
 ```
 
 ## rpcclient
+
 ```bash
 rpcclient -U "" -N 172.16.5.5
 rpcclient $> enumdomusers
 ```
 
 ## crackmapexec
+
 ```bash
 crackmapexec smb 172.16.5.5 --users
 ```
 
 # LDAP Anonymous
+
 ```bash
 ldapsearch -h 172.16.5.5 -x -b "DC=INLANEFREIGHT,DC=LOCAL" -s sub "(&(objectclass=user))"  | grep sAMAccountName: | cut -f2 -d" "
 ```
@@ -64,6 +72,11 @@ crackmapexec smb 172.16.5.5 -u htb-student -p Academy_student_AD! --users
 ```
 
 # Enumerate users by brute forcing rid
+
 ```bash
 nxc smb 10.10.11.35 -u guest -p '' --rid-brute
+```
+
+```bash
+ldapsearch -H ldap://dc.domain.com:389 -x -D "username@domain.com" -w "password" -b "DC=domain,DC=com"
 ```

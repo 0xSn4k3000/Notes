@@ -80,3 +80,12 @@ nxc smb 10.10.11.35 -u guest -p '' --rid-brute
 ```bash
 ldapsearch -H ldap://dc.domain.com:389 -x -D "username@domain.com" -w "password" -b "DC=domain,DC=com"
 ```
+
+# Hybred infra
+
+if you are inside a hybred infrastructure and you get access to the linux, you can enum active directory users with getent
+
+```bash
+$ getent group "domain users"
+domain users:*:59600513:w.earl,svc_infra,administrator,b.briggs,m.hannigan,s.johnson,l.palmer,j.hurley,d.cooper
+```

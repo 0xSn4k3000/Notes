@@ -45,5 +45,5 @@ docker context use fries
 
 ```bash
 docker run -it --rm --privileged --net=host --pid=host -v /:/mnt [image] \
-bash -c "chroot /mnt /bin/bash \|\| chroot /mnt /bin/sh"
+bash -c "chroot /mnt /bin/bash || chroot /mnt /bin/sh"
 ```

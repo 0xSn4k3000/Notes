@@ -29,7 +29,7 @@ more.. https://www.thehacker.recipes/ad/movement/adcs/certificate-templates#no-s
 
 From UNIX-like systems, Certipy (Python) can be used to enumerate for, and conduct, the ESC9 scenario.
 
-In this scenario, user1 has GenericWrite against user2 and wants to compromise user3. user2 is allowed to enroll in a vulnerable template that specifies the CT_FLAG_NO_SECURITY_EXTENSION flag in the msPKI-Enrollment-Flag value.
+In this scenario, user1 has `GenericWrite` against user2 and wants to compromise user3. user2 is allowed to enroll in a vulnerable template that specifies the CT_FLAG_NO_SECURITY_EXTENSION flag in the msPKI-Enrollment-Flag value.
 
 First, the user2's hash is needed. It can be retrieved via a Shadow Credentials attack, for example.
 

